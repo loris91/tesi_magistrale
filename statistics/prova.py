@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-15 -*-
 
+import re
 import nltk
 
 if __name__ == "__main__":
@@ -22,15 +23,11 @@ if __name__ == "__main__":
 	print "\n____________________\n"
 	'''
 
-	array = []
-	print array
+	phrase = "Hard drive (HD) is amazing and the pen drive [128MB of memory] is usefull {price (and not only)is very hight}, but is cool!"
 
-	array.append("frase 1")
-	print array
+	phrase = re.sub(r"\{[^}]*\}","",phrase) #Elimino le parentesi {} e il loro contenuto
+	phrase = re.sub(r"\[[^\]]*\]","",phrase) #Elimino le parentesi [] e il loro contenuto
+	phrase = re.sub(r"\([^)]*\)","",phrase) #Elimino le parentesi () e il loro contenuto
+	phrase = re.sub(r" +"," ",phrase)
 
-	array.append("frase 2")
-	print array
-
-	array.append("frase 3")
-	print array
-
+	print phrase

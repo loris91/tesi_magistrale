@@ -1,5 +1,12 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-15 -*-
+'''
+La classe pros_cons_extractor si occupa di estrarre i commenti PROS e CONS dai file json della cartella review
+della categoria scelta. Per ogni review i commenti vengono puliti (eliminati caratteri specili), e le frasi
+vengono separate in base ai caratteri [,.!?;] trovati in essa. Infine vengono generati 2 file json contenenti 
+i commenti lavorati.
+
+'''
 
 import os
 import re
@@ -7,15 +14,18 @@ import json
 import nltk
 from pprint import pprint
 
+category_name = "TVS"
 
-review_folder = "/home/alakay/Scrivania/cache/review"
+
+review_folder = "/home/alakay/Scrivania/cache/"+category_name+"/review"
 
 def pulisci(phrase):
-	#phrase = re.sub(r"&#160;"," ",phrase) #Elimino i non-breaking space
-	#phrase = re.sub(r"&#163;","",phrase) #Elimino il symbol £
-	#phrase = re.sub(r"&#133;"," ",phrase) #Elimino i puntini di sospensione
-
 	phrase = re.sub(r"&[^;]*;"," ",phrase) #Elimino i caratteri speciali
+
+	phrase = re.sub(r"\{[^}]*\}","",phrase) #Elimino le parentesi {} e il loro contenuto
+	phrase = re.sub(r"\[[^\]]*\]","",phrase) #Elimino le parentesi [] e il loro contenuto
+	phrase = re.sub(r"\([^)]*\)","",phrase) #Elimino le parentesi () e il loro contenuto
+
 	phrase = re.sub(r" +"," ",phrase) #Elimino gli spazi ripetuti
 	return phrase
 
@@ -41,10 +51,10 @@ def analizza_file(file_name,data_pros,data_cons):
 		cons = pulisci(element["Disadvantages"])
 		split_phrase(cons,data_cons)
 
-	with open ("/home/alakay/Scrivania/cache/pros.json","w") as myfile:
+	with open ("/home/alakay/Scrivania/cache/"+category_name+"/pros.json","w") as myfile:
 			json.dump(data_pros, myfile)
 
-	with open ("/home/alakay/Scrivania/cache/cons.json","w") as myfile:
+	with open ("/home/alakay/Scrivania/cache/"+category_name+"/cons.json","w") as myfile:
 			json.dump(data_cons, myfile)
 
 
@@ -63,8 +73,8 @@ if __name__ == "__main__":
 	print len (data_pros['opinion'])
 	print len (data_cons['opinion'])
 
-	with open ("/home/alakay/Scrivania/cache/pros.json","w") as myfile:
+	with open ("/home/alakay/Scrivania/cache/"+category_name+"/pros.json","w") as myfile:
 			json.dump(data_pros, myfile)
 
-	with open ("/home/alakay/Scrivania/cache/cons.json","w") as myfile:
+	with open ("/home/alakay/Scrivania/cache/"+category_name+"/cons.json","w") as myfile:
 			json.dump(data_cons, myfile)
