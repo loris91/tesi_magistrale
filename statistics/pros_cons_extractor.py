@@ -16,7 +16,6 @@ from pprint import pprint
 
 category_name = "TVS"
 
-
 review_folder = "/home/alakay/Scrivania/cache/"+category_name+"/review"
 
 def pulisci(phrase):
