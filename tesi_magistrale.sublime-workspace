@@ -1,0 +1,646 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"nt",
+				"nltk	module"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"lis",
+				"list_files	statement"
+			],
+			[
+				"tr",
+				"try	Try/Except"
+			],
+			[
+				"fil",
+				"filename	forstmt"
+			],
+			[
+				"fol",
+				"folder_path	statement"
+			],
+			[
+				"i",
+				"i	statement"
+			],
+			[
+				"fo",
+				"folder	forstmt"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
+				"fiel",
+				"filename	param"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"pro",
+				"product_path	statement"
+			],
+			[
+				"tv",
+				"tv_folder	statement"
+			],
+			[
+				"li",
+				"list_files	statement"
+			],
+			[
+				"j",
+				"json_stat	statement"
+			],
+			[
+				"jso",
+				"json_stat	statement"
+			],
+			[
+				"di",
+				"dizionario"
+			],
+			[
+				"op",
+				"opinion"
+			],
+			[
+				"list",
+				"lista	statement"
+			],
+			[
+				"map",
+				"maps	statement"
+			],
+			[
+				"ma",
+				"maps	statement"
+			],
+			[
+				"js",
+				"json_data	statement"
+			],
+			[
+				"num",
+				"numero_commenti	statement"
+			],
+			[
+				"wri",
+				"write	function"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"sp",
+				"split_phrase	function"
+			],
+			[
+				"co",
+				"cons	statement"
+			],
+			[
+				"ala",
+				"analizza_file	function"
+			],
+			[
+				"fi",
+				"file_name	param"
+			],
+			[
+				"revi",
+				"review_folder	statement"
+			],
+			[
+				"url",
+				"url_categoria_principale"
+			],
+			[
+				"th",
+				"threadName	param"
+			],
+			[
+				"user",
+				"user_name	statement"
+			],
+			[
+				"div",
+				"div_prosCons	statement"
+			],
+			[
+				"div_pro",
+				"div_prosCons	statement"
+			],
+			[
+				"div_p",
+				"div_prosCons	statement"
+			],
+			[
+				"produc",
+				"product_name	statement"
+			],
+			[
+				"product",
+				"product_category	statement"
+			],
+			[
+				"hr",
+				"href_review	statement"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"link",
+				"link_prodotto_recensito"
+			],
+			[
+				"links",
+				"links_impaginazione_review	statement"
+			],
+			[
+				"estr",
+				"estrai_caratteristiche_prodotto"
+			],
+			[
+				"pe",
+				"penultimo_link	statement"
+			],
+			[
+				"es",
+				"estrai_links_impaginazione_review	function"
+			],
+			[
+				"la",
+				"last_element	statement"
+			],
+			[
+				"ap",
+				"append	function"
+			],
+			[
+				"pagi",
+				"pagination_review	statement"
+			],
+			[
+				"pa",
+				"pagination_review	statement"
+			],
+			[
+				"PA",
+				"PageRepository	class"
+			],
+			[
+				"lin",
+				"links_impaginazione_review	statement"
+			],
+			[
+				"nel",
+				"next_page_link	statement"
+			],
+			[
+				"e",
+				"extend	function"
+			],
+			[
+				"ur",
+				"urlRoot	statement"
+			],
+			[
+				"Pa",
+				"PageRepository	class"
+			],
+			[
+				"lista",
+				"lista_link_prodotti_recensiti	statement"
+			],
+			[
+				"st",
+				"str	class"
+			],
+			[
+				"div_",
+				"div_prod_section	statement"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"str",
+				"stringify_children	function"
+			],
+			[
+				"div_pr",
+				"div_prod_section	statement"
+			],
+			[
+				"con",
+				"text_content"
+			],
+			[
+				"J",
+				"JsonFileStorage	class"
+			],
+			[
+				"rev",
+				"review	statement"
+			],
+			[
+				"opi",
+				"opinion_cons	statement"
+			],
+			[
+				"produ",
+				"product_list"
+			],
+			[
+				"tex",
+				"text_content"
+			],
+			[
+				"tye",
+				"type	class"
+			],
+			[
+				"app",
+				"apply_xpath	function"
+			],
+			[
+				"url_p",
+				"url_prodotto_prova	statement"
+			],
+			[
+				"ele",
+				"element_text	forstmt"
+			],
+			[
+				"nex",
+				"next_page_element	statement"
+			],
+			[
+				"pr",
+				"product_list_extractor	function"
+			],
+			[
+				"next",
+				"next_page_link	statement"
+			],
+			[
+				"el",
+				"element_text	statement"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"su",
+				"suffix_next_page	statement"
+			],
+			[
+				"ne",
+				"next_page	statement"
+			],
+			[
+				"mi",
+				"main_link_list	statement"
+			],
+			[
+				"main",
+				"main_link_list	statement"
+			],
+			[
+				"no",
+				"None	keyword"
+			],
+			[
+				"cre",
+				"create_page"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/alakay/tesi_magistrale/statistics"
+	],
+	"file_history":
+	[
+		"/home/alakay/tesi_magistrale/statistics/prova.py",
+		"/home/alakay/tesi_magistrale/statistics/pros_cons_analyser.py",
+		"/home/alakay/.config/sublime-text-3/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
+		"/home/alakay/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/alakay/occurrence-extractor/src/store/crawler.py",
+		"/home/alakay/Scrivania/cache/Computers/product/HP Compaq Business Notebook Nx9010 .json",
+		"/home/alakay/Scrivania/cache/Computers/product/Fujitsu AMILO A1630 .json",
+		"/home/alakay/Scrivania/provaz/script.sh",
+		"/home/alakay/tesi_magistrale/src/pros_cons_extractor.py",
+		"/home/alakay/tesi_magistrale/src/pros_cons_word_cont.py",
+		"/home/alakay/Scrivania/cache/Car Accessories/lista_review.txt",
+		"/home/alakay/Scrivania/cache/Car Accessories/lista_prodotti.txt",
+		"/home/alakay/tesi_magistrale/src/prova.py",
+		"/home/alakay/tesi_magistrale/src/pros_cons_analyser.py",
+		"/home/alakay/Scrivania/cache/lista_review.txt",
+		"/home/alakay/Scrivania/cache/lista_prodotti.txt",
+		"/home/alakay/tesi_magistrale/src/parser.py",
+		"/home/alakay/Scrivania/reset.sh",
+		"/home/alakay/Scrivania/testo.json",
+		"/home/alakay/Scrivania/tesi_magistrale/src/parser.py",
+		"/home/alakay/Scrivania/cache/review/Aardvark Mobile (iPhone Application).json",
+		"/home/alakay/Scrivania/cache/errori.txt",
+		"/home/alakay/Scrivania/untitled.py",
+		"/home/alakay/occurrence-extractor/src/store/specifications_reader.py",
+		"/home/alakay/occurrence-extractor/src/store/page_repository.py",
+		"/usr/lib/python2.7/dist-packages/requests/adapters.py",
+		"/home/alakay/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/alakay/Tesi_Magistrale/occurrence-extractor/src/store/crawler.py",
+		"/home/alakay/Scrivania/Stato di avanzamento",
+		"/home/alakay/occurrence-extractor/src/utils/json_file_storage.py",
+		"/home/alakay/Scrivania/cache/data/review_link.txt",
+		"/home/alakay/Scrivania/cache/data/product_link.txt",
+		"/home/alakay/occurrence-extractor/src/model/page.py",
+		"/home/alakay/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/alakay/.config/sublime-text-3/Packages/User/Distraction Free.sublime-settings",
+		"/home/alakay/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/alakay/occurrence-extractor/src/sources/site_crawling.py",
+		"/home/alakay/Scrivania/file.html",
+		"/home/alakay/occurrence-extractor/src/sources/focused_crawling.py",
+		"/home/alakay/Scrivania/occurrence-extractor-Branch_Luca/src/analisys/Entropy.py"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".\n",
+			"###",
+			"}}",
+			"$",
+			"'",
+			"^",
+			" .*",
+			".*[0-9]*\\. *",
+			"###",
+			"&#",
+			"&#16[^0]",
+			"&#16[^3]",
+			"&#",
+			"light",
+			"\"",
+			"  *",
+			"\\t*",
+			"\\t\\t",
+			"\\t*",
+			"  ",
+			"',.*",
+			"', 'Url: ",
+			"('Errore metodo: ",
+			"',.*$",
+			"', 'Url: ",
+			"('Errore metodo:",
+			"',.*",
+			".*'Url: ",
+			"('Errore metodo: estrai_links_prodotti_recensiti', 'Url: ",
+			"',.*",
+			"^.*'Url: ",
+			"$",
+			"^",
+			"', <class.*",
+			".*'Url: ",
+			"print",
+			"/Start/",
+			"http://www.ciao.co.uk/Reviews/Apple_iPhone_3G_16GB__7863352",
+			"$",
+			"^",
+			"print ",
+			"product_page_ex",
+			"riferimento",
+			"product_page_information_extractor(",
+			"write",
+			"().",
+			"()",
+			"print",
+			"with open",
+			"print",
+			"with open",
+			"\\<div",
+			"<div",
+			"print",
+			"defini",
+			"usage",
+			"hig",
+			"apply",
+			"class"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"#",
+			"\"] = \"",
+			"\"",
+			"dizionario['",
+			"",
+			"#",
+			"",
+			" ",
+			"",
+			" ",
+			"\")",
+			"(\"",
+			"",
+			"\")",
+			"(\"",
+			"",
+			"\")",
+			"analizza_pagina_prodotto(\"",
+			"",
+			"\")",
+			"lista = estrai_link_prodotti_recensiti(\"",
+			"esempio"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 466.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "tesi_magistrale.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 197.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -3,6 +3,7 @@
 
 import re
 import nltk
+from pprint import pprint
 
 if __name__ == "__main__":
 	'''
@@ -23,11 +24,37 @@ if __name__ == "__main__":
 	print "\n____________________\n"
 	'''
 
-	phrase = "Hard drive (HD) is amazing and the pen drive [128MB of memory] is usefull {price (and not only)is very hight}, but is cool!"
+	data = {}
 
-	phrase = re.sub(r"\{[^}]*\}","",phrase) #Elimino le parentesi {} e il loro contenuto
-	phrase = re.sub(r"\[[^\]]*\]","",phrase) #Elimino le parentesi [] e il loro contenuto
-	phrase = re.sub(r"\([^)]*\)","",phrase) #Elimino le parentesi () e il loro contenuto
-	phrase = re.sub(r" +"," ",phrase)
+	data['TVs'] = {}
 
-	print phrase
+	data['TVs']['Color'] = []
+
+	data['TVs']['Color'].append("Schermo")
+	data['TVs']['Color'].append("Batteria")
+	data['TVs']['Color'].append("Tastiera")
+
+	lista = ["Audio","Schermo","Puppa"]
+
+	data['TVs']['Color'] = list(set(data['TVs']['Color'] + lista))
+
+	'''
+	if 'Plasma' in data['TVs'].keys():
+		data['TVs']['Plasma'].append("Schermo")
+		data['TVs']['Plasma'].append("Batteria")
+		data['TVs']['Plasma'].append("Tastiera")
+	else :
+		data['TVs']['Plasma'] = []
+		data['TVs']['Plasma'].append("Schermo")
+		data['TVs']['Plasma'].append("Batteria")
+		data['TVs']['Plasma'].append("Tastiera")
+	'''
+	if 'Plasma' not in data['TVs'].keys():		
+		data['TVs']['Plasma'] = []
+	data['TVs']['Plasma'].append("Schermo")
+	data['TVs']['Plasma'].append("Batteria")
+	data['TVs']['Plasma'].append("Tastiera")
+
+
+
+	pprint(data)

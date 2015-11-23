@@ -60,8 +60,17 @@ def elimina_spazio():
 				rinomina_file(folder,filename)
 			cancella_file(folder,filename)
 
+def aggiungi_categoria(category,filename):
+	prod_path = "/home/alakay/Scrivania/cache/"+category+"/product/"+filename
+	review_path = "/home/alakay/Scrivania/cache/"+category+"/review/"+filename
 
-def aggiungi_categoria():
+	with open(review_path) as review_file:
+		review_json = json.load(review_file)
+		json_file.close()
+		
+
+
+def modifica_product():
 	list_folder = os.listdir(review_folder)
 
 	for folder in list_folder:
