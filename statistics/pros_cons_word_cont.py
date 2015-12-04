@@ -14,12 +14,10 @@ import json
 import nltk
 from pprint import pprint
 
-category_name = "TVS"
+categories_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"
 
-review_folder = "/home/alakay/Scrivania/cache/"+category_name+"/"
-
-def pros_work():
-	with open(review_folder+"pros.json") as json_file:
+def pros_work(category_folder):
+	with open(category_folder+"pros.json") as json_file:
 		json_data = json.load(json_file)
 		json_file.close()
 
@@ -33,7 +31,7 @@ def pros_work():
 	for opinion  in json_data['opinion']:
 		tokens = nltk.word_tokenize(opinion)
 		somma = somma + len(tokens)
-		key = str(len(tokens))
+		key = str(len(tokens)) if (len(tokens)<8) else '>7'
 		if json_stat.has_key(key):
 			json_stat[key]=json_stat[key]+1
 		else:
@@ -45,12 +43,13 @@ def pros_work():
 
 	json_stat['Numero_Commenti'] = str(numero_commenti)
 	json_stat['Media'] = str(media)
-	with open ("/home/alakay/Scrivania/cache/"+category_name+"/statistiche.json","a") as myfile:
+
+	with open (category_folder+"statistiche.json","a") as myfile:
 			json.dump(json_stat, myfile)
 
 
-def cons_work():
-	with open(review_folder+"cons.json") as json_file:
+def cons_work(category_folder):
+	with open(category_folder+"cons.json") as json_file:
 		json_data = json.load(json_file)
 		json_file.close()
 
@@ -63,7 +62,7 @@ def cons_work():
 	for opinion  in json_data['opinion']:
 		tokens = nltk.word_tokenize(opinion)
 		somma = somma + len(tokens)
-		key = str(len(tokens))
+		key = str(len(tokens)) if (len(tokens)<8) else '>7'
 		if json_stat.has_key(key):
 			json_stat[key]=json_stat[key]+1
 		else:
@@ -75,10 +74,15 @@ def cons_work():
 
 	json_stat['Numero_Commenti'] = str(numero_commenti)
 	json_stat['Media'] = str(media)
-	with open ("/home/alakay/Scrivania/cache/"+category_name+"/statistiche.json","a") as myfile:
+	with open (category_folder+"statistiche.json","a") as myfile:
 			json.dump(json_stat, myfile)
 
 
 if __name__ == "__main__":
-	pros_work()
-	cons_work()
+	list_folder = os.listdir(categories_folder)
+
+	for category_name in list_folder:
+		#print category_name
+		category_folder = categories_folder+category_name+"/"
+		pros_work(category_folder)
+		cons_work(category_folder)

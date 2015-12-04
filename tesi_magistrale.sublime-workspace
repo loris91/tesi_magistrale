@@ -4,16 +4,192 @@
 		"selected_items":
 		[
 			[
-				"nt",
-				"nltk	module"
+				"cat",
+				"category_name"
 			],
 			[
-				"file",
-				"filename"
+				"cam",
+				"category_name"
+			],
+			[
+				"ana",
+				"analizza_categoria"
+			],
+			[
+				"trova",
+				"trova_caratteristica"
+			],
+			[
+				"analizza",
+				"analizza_categoria	function"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"tmp",
+				"tmp_pros_file"
+			],
+			[
+				"cae",
+				"category_name"
+			],
+			[
+				"cate",
+				"category_name"
+			],
+			[
+				"max",
+				"max_size"
+			],
+			[
+				"ma",
+				"max_size"
+			],
+			[
+				"f",
+				"feature"
+			],
+			[
+				"pp",
+				"pprint"
+			],
+			[
+				"tree",
+				"treebank"
+			],
+			[
+				"w",
+				"word_tokenize"
+			],
+			[
+				"cons",
+				"cons_work"
+			],
+			[
+				"ca",
+				"category_name"
+			],
+			[
+				"js",
+				"json_stat"
+			],
+			[
+				"j",
+				"json_stat"
+			],
+			[
+				"rev",
+				"review_folder"
 			],
 			[
 				"lis",
-				"list_files	statement"
+				"list_folder"
+			],
+			[
+				"ele",
+				"element"
+			],
+			[
+				"p",
+				"phrase"
+			],
+			[
+				"lista",
+				"lista_characts"
+			],
+			[
+				"na",
+				"name_element"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"pulis",
+				"pulisci_stringa"
+			],
+			[
+				"fun",
+				"func3	function"
+			],
+			[
+				"str",
+				"stringa"
+			],
+			[
+				"cato",
+				"category"
+			],
+			[
+				"va",
+				"variabile_globale"
+			],
+			[
+				"cha",
+				"charact_json"
+			],
+			[
+				"pros",
+				"pros_json"
+			],
+			[
+				"ke",
+				"keys"
+			],
+			[
+				"se",
+				"section"
+			],
+			[
+				"da",
+				"data_cons_cat"
+			],
+			[
+				"spl",
+				"split_phrase"
+			],
+			[
+				"jso",
+				"json_data"
+			],
+			[
+				"data_co",
+				"data_cons_cat"
+			],
+			[
+				"data_",
+				"data_pros_cat"
+			],
+			[
+				"re",
+				"reviews"
+			],
+			[
+				"li",
+				"list_files"
+			],
+			[
+				"ne",
+				"new_list"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"list",
+				"list_folder"
+			],
+			[
+				"nt",
+				"nltk	module"
 			],
 			[
 				"tr",
@@ -36,10 +212,6 @@
 				"folder	forstmt"
 			],
 			[
-				"ca",
-				"category"
-			],
-			[
 				"fiel",
 				"filename	param"
 			],
@@ -48,24 +220,8 @@
 				"try	Try/Except"
 			],
 			[
-				"pro",
-				"product_path	statement"
-			],
-			[
 				"tv",
 				"tv_folder	statement"
-			],
-			[
-				"li",
-				"list_files	statement"
-			],
-			[
-				"j",
-				"json_stat	statement"
-			],
-			[
-				"jso",
-				"json_stat	statement"
 			],
 			[
 				"di",
@@ -76,20 +232,8 @@
 				"opinion"
 			],
 			[
-				"list",
-				"lista	statement"
-			],
-			[
 				"map",
 				"maps	statement"
-			],
-			[
-				"ma",
-				"maps	statement"
-			],
-			[
-				"js",
-				"json_data	statement"
 			],
 			[
 				"num",
@@ -98,10 +242,6 @@
 			[
 				"wri",
 				"write	function"
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"sp",
@@ -224,10 +364,6 @@
 				"PageRepository	class"
 			],
 			[
-				"lista",
-				"lista_link_prodotti_recensiti	statement"
-			],
-			[
 				"st",
 				"str	class"
 			],
@@ -240,24 +376,12 @@
 				"text"
 			],
 			[
-				"str",
-				"stringify_children	function"
-			],
-			[
 				"div_pr",
 				"div_prod_section	statement"
 			],
 			[
-				"con",
-				"text_content"
-			],
-			[
 				"J",
 				"JsonFileStorage	class"
-			],
-			[
-				"rev",
-				"review	statement"
 			],
 			[
 				"opi",
@@ -284,16 +408,8 @@
 				"url_prodotto_prova	statement"
 			],
 			[
-				"ele",
-				"element_text	forstmt"
-			],
-			[
 				"nex",
 				"next_page_element	statement"
-			],
-			[
-				"pr",
-				"product_list_extractor	function"
 			],
 			[
 				"next",
@@ -310,10 +426,6 @@
 			[
 				"su",
 				"suffix_next_page	statement"
-			],
-			[
-				"ne",
-				"next_page	statement"
 			],
 			[
 				"mi",
@@ -335,6 +447,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "sentiment_analysis/analyser.py",
+			"settings":
+			{
+				"buffer_size": 2941,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "statistics/prova.py",
+			"settings":
+			{
+				"buffer_size": 1598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sentiment_analysis/primo_passo_analisi.py",
+			"settings":
+			{
+				"buffer_size": 3017,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -360,9 +496,13 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "in",
+		"last_filter": "packa",
 		"selected_items":
 		[
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
 			[
 				"in",
 				"Package Control: Install Package"
@@ -393,15 +533,77 @@
 	},
 	"expanded_folders":
 	[
+		"/home/alakay/tesi_magistrale",
+		"/home/alakay/tesi_magistrale/characteristics",
+		"/home/alakay/tesi_magistrale/sentiment_analysis",
 		"/home/alakay/tesi_magistrale/statistics"
 	],
 	"file_history":
 	[
+		"/home/alakay/tesi_magistrale/tmp.py",
+		"/home/alakay/tesi_magistrale/storage/mongo_prove.py",
+		"/home/alakay/occurrence-extractor/src/store/crawler.py",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Cameras/cons_cat.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Cameras/tmp_pros_file.txt",
+		"/home/alakay/tesi_magistrale/characteristics/characteristics_extractor.py",
+		"/home/alakay/tesi_magistrale/statistics/pros_cons_extractor.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/app/chunkparser_app.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/tag/hunpos.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/tag/__init__.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/tag/mapping.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/tag/perceptron.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/tag/senna.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/tag/stanford.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/parse/util.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/parse/stanford.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/parse/bllip.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/classify/senna.py",
+		"/home/alakay/tesi_magistrale/sentiment_analysis/albero_dipendenze.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/chunk/regexp.py",
 		"/home/alakay/tesi_magistrale/statistics/prova.py",
+		"/usr/local/lib/python2.7/dist-packages/nltk/test/bnc.doctest",
+		"/usr/local/lib/python2.7/dist-packages/nltk/test/bleu.doctest",
+		"/usr/local/lib/python2.7/dist-packages/nltk/stem/lancaster.py",
+		"/home/alakay/tesi_magistrale/sentiment_analysis/graph_example.py",
+		"/home/alakay/.local/lib/python2.7/site-packages/networkx/readwrite/gml.py",
+		"/home/alakay/tesi_magistrale/sentiment_analysis/analyser",
+		"/home/alakay/tesi_magistrale/models/graph",
+		"/home/alakay/nltk_data/corpora/treebank/combined/wsj_0001.mrg",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/TVs/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Percussion & Drum Machines/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Small Kitchen Appliances/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Software/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Software/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Small Kitchen Appliances/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Percussion & Drum Machines/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/TVs/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Large Kitchen Appliances/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Large Kitchen Appliances/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Guitars, Amplifiers & Effects/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Fishing/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Guitars, Amplifiers & Effects/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Fishing/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Computers/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/DJ Equipment/lista_review.txt",
 		"/home/alakay/tesi_magistrale/statistics/pros_cons_analyser.py",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/DJ Equipment/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Computers/lista_prodotti.txt",
+		"/home/alakay/tesi_magistrale/statistics/pros_cons_word_cont.py",
+		"/home/alakay/tesi_magistrale/characteristics/characteristics_find.py",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Car Accessories/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Car Accessories/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Cameras/lista_review.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Cameras/lista_prodotti.txt",
+		"/home/alakay/Scrivania/Ciao.co.uk/Category/Guitars, Amplifiers & Effects/pros_cat.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/DJ Equipment.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/Fishing.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/Car Accessories.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/Guitars, Amplifiers & Effects.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/Percussion & Drum Machines.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/Small Kitchen Appliances.json",
+		"/home/alakay/Scrivania/Ciao.co.uk/Characteristics/TVs.json",
 		"/home/alakay/.config/sublime-text-3/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
 		"/home/alakay/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
-		"/home/alakay/occurrence-extractor/src/store/crawler.py",
 		"/home/alakay/Scrivania/cache/Computers/product/HP Compaq Business Notebook Nx9010 .json",
 		"/home/alakay/Scrivania/cache/Computers/product/Fujitsu AMILO A1630 .json",
 		"/home/alakay/Scrivania/provaz/script.sh",
@@ -440,7 +642,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -454,6 +656,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"TAGSET",
+			"VBZ",
+			"predict",
+			"get(",
+			"get",
+			"tagdict",
+			"                  ",
+			"',\\n",
+			">>> ",
+			": ",
+			",$",
+			"^ ",
+			"'",
+			"\"",
+			"'\\].*",
+			"', '",
+			".*\"\\['",
+			"  .*\\n",
+			" +",
+			"$\\n",
+			"\\n$",
+			"... ",
+			"print",
+			"\"a\")",
+			"\"w\")",
+			"\"a\")",
+			"category",
+			"\"Listed on Ciao since\", ",
+			"nltk.",
 			".\n",
 			"###",
 			"}}",
@@ -520,6 +751,16 @@
 		"regex": true,
 		"replace_history":
 		[
+			" ",
+			"',",
+			"",
+			"\\t",
+			"",
+			"\\t",
+			" ",
+			"",
+			" ",
+			"",
 			"#",
 			"\"] = \"",
 			"\"",
@@ -552,8 +793,96 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "sentiment_analysis/analyser.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1983,
+								1983
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1124.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "statistics/prova.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								851,
+								851
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 666.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sentiment_analysis/primo_passo_analisi.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1179,
+								1179
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 508.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -590,7 +919,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 466.0
+		"height": 456.0
 	},
 	"output.find_results":
 	{
@@ -600,7 +929,7 @@
 	"project": "tesi_magistrale.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
