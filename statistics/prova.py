@@ -1,7 +1,9 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-15 -*-
 
+import os
 import re
+import json
 import nltk
 from pprint import pprint
 

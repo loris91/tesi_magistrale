@@ -2,15 +2,8 @@
 # -*- coding: iso-8859-15 -*-
 
 '''
-La classe analyser.py prende in input i file temporanei tmp_cat.txt generati dalla classe filter.py e 
-ne analizza il contenuto andato ad estrarre feature e feature_indicator da ogni singolo commento.
-In questo passo una feature è una sequenza di parole consecutive non vuota di ["NN","NNS","NNP","NNPS"]
-cioè nomi e nomi propri, mentre
-un feature_indicator è una sequenza di parole consecutive non vuota di ["JJ","JJR","JJS","RB","RBR","RBS"],
-cioè aggettivi o avverbi.
-Vengono salvati tutti quei commenti in cui è presente almeno il feature_indicator.
-Per ogni categoria viene generato un file json in cui si memorizza
-	dictionary_json[section][feature][polarity]=list[value]
+La classe prove_analyser.py prende in input i file temporanei tmp_cat.txt generati dalla classe filter.py.
+Lo scopo della classe è analizzare possibili "qualcosa" che permetta di estrarre contenuti prima scartati.
 '''
 
 import os
@@ -47,20 +40,56 @@ def trova_valore(tagged):
 					return str(element[0])+" "+str(tagged[i+1][0])
 			return str(element[0])
 
+def get_phrase(tagged):
+	stringa = ""
+	for (word,pos_tag) in tagged:
+		stringa = stringa + str(word) + " "	
+	return stringa
 
-def analizza_categoria(category_name):
+
+def stemma(phrase):
+	string = ""
+	for word in phrase.split():
+		string = string + str(st.stem(word)) + " "
+
+	return string
+
+def analizza_categoria(array):
+	new_array = []
+	print len(array)
+	for tagged in array:
+
+		feature = trova_caratteristica(tagged)
+
+		value = trova_valore(tagged)
+		if value is not None:
+			new_array.append((tagged,feature,value))
+	print len(new_array)
+	for a in new_array:
+		print a
+
+
+def analizza(array):
+	new_array = []
+	for frase in array:
+		phrase = stemma(frase)
+		tokens = nltk.word_tokenize(phrase)
+		tagged = nltk.pos_tag(tokens)
+		new_array.append(tagged)
+	analizza_categoria(new_array)
+
+
+
+def scartati(category_name):
 	category_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"+category_name+"/"
-	
+		
 	with open(category_folder+"tmp_file.txt") as tmp_pros_file:
 		content = tmp_pros_file.read().splitlines()
 
-	dictionary = {}
+	array = []
 
 	for tupla in content:
 		(section,polarity,tagged) = eval(tupla)
-
-		if section not in dictionary.keys():
-			dictionary[section]={}
 
 		feature = trova_caratteristica(tagged)
 		if feature is not None:
@@ -68,20 +97,14 @@ def analizza_categoria(category_name):
 
 
 		value = trova_valore(tagged)
-		if value is not None:
-			value = str(st.stem(value))
-			if feature in dictionary[section].keys():
-				if polarity in dictionary[section][feature].keys():
-					dictionary[section][feature][polarity].append(value)
-				else:
-					dictionary[section][feature][polarity]=[value]
-			else:
-				dictionary[section][feature]={}
-				dictionary[section][feature][polarity]=[value]
+		if value is None:
+			array.append(get_phrase(tagged))
 
-	#pprint(dictionary)
-	with open (category_folder+"feature_indicator.json","w") as myfile:
-			json.dump(dictionary, myfile)
+	print len(array)
+
+	analizza(array)
+
+
 
 
 if __name__ == "__main__":
@@ -100,10 +123,14 @@ if __name__ == "__main__":
 	###category_name = list_folder[2] := Fishing_2MB
 	'''
 
-	#category_name = list_folder[6]
-	#print "In esecuzione analisi su: " + category_name
-	#analizza_categoria(category_name)
+	category_name = list_folder[5]
+	print "In esecuzione analisi su: " + category_name
+	scartati(category_name)
 
+
+	'''
 	for category_name in list_folder:
 		print "In esecuzione analisi su: " + category_name
-		analizza_categoria(category_name)
+		scartati(category_name)
+	'''
+
