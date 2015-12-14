@@ -21,7 +21,6 @@ if __name__ == "__main__":
 	list_folder = os.listdir(categories_folder)
 
 	for category_name in list_folder:
-	#category_name = list_folder[0]
 		category_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"+category_name+"/"
 			
 		with open(category_folder+"feature_indicator.json") as json_file:
@@ -32,8 +31,8 @@ if __name__ == "__main__":
 			for feature in json_data[section].keys():
 				for polarity in json_data[section][feature].keys():
 					value = json_data[section][feature][polarity]
-					print (section,feature,polarity,value)
 					element = {}
+					element['category']=category_name
 					element['section']=section
 					element['feature']=feature
 					element['polarity']=polarity

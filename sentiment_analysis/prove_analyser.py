@@ -58,7 +58,6 @@ def analizza_categoria(array):
 	new_array = []
 	print len(array)
 	for tagged in array:
-
 		feature = trova_caratteristica(tagged)
 
 		value = trova_valore(tagged)

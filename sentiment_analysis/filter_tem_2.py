@@ -5,6 +5,17 @@
 la classe filter.py prende con input i file pros_cat.json e cons_cat.json,
 ogni commento viene tokenizzato e se il commento è composto da meno di 5 token allora i tokens vengono taggati
 tramite un pos_tag. i tag vengono salvati in un file temporaneo tmp_cat.txt.
+
+
+Processa solo le seguenti categorie=
+Car Accessories
+Computers
+DJ Equipment
+Fishing
+Guitars, Amplifiers & Effects
+Percussion & Drum Machines
+Small Kitchen Appliances
+TVs
 '''
 
 import os
@@ -81,24 +92,17 @@ def analizza_categoria(category_name):
 
 
 if __name__ == "__main__":
-	list_folder = os.listdir(categories_folder)
-	'''
-	category_name = list_folder[0] := Cameras_286MB
-	category_name = list_folder[8] := Computers_196MB
-	category_name = list_folder[7] := Small Kitchen Appliances_99MB
-	category_name = list_folder[1] := TVs_65_MB	
-	category_name = list_folder[3] := Large Kitchen Appliances_64MB	
-	category_name = list_folder[9] := Software_32MB
-	category_name = list_folder[4] := Guitars, Amplifiers & Effects_26MB
-	category_name = list_folder[10] := Car Accessories_16MB
-	category_name = list_folder[6] := Percussion & Drum Machines_4MB
-	category_name = list_folder[5] := DJ Equipment_3MB
-	category_name = list_folder[2] := Fishing_2MB
-	'''
+	list_folder = [
+	'Car Accessories',
+	'Computers',
+	'DJ Equipment',
+	'Fishing',
+	'Guitars, Amplifiers & Effects',
+	'Percussion & Drum Machines',
+	'Small Kitchen Appliances',
+	'TVs'
+	]
 
-	#category_name = list_folder[2]
-	#print "In esecuzione analisi su: " + category_name
-	#analizza_categoria(category_name)
 
 	for category_name in list_folder:
 		print "In esecuzione analisi su: " + category_name

@@ -47,6 +47,13 @@ def trova_valore(tagged):
 					return str(element[0])+" "+str(tagged[i+1][0])
 			return str(element[0])
 
+def compatta(array):
+	stringa = ""
+	for el in array:
+		stringa+=el[0]+" "
+	return stringa
+
+
 
 def analizza_categoria(category_name):
 	category_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"+category_name+"/"
@@ -64,30 +71,15 @@ def analizza_categoria(category_name):
 
 		feature = trova_caratteristica(tagged)
 
-		#if feature is not None:
-		#	feature = str(st.stem(feature))
 
 
 		value = trova_valore(tagged)
-		if value is not None:
-			#value = str(st.stem(value))
-			if feature in dictionary[section].keys():
-				if polarity in dictionary[section][feature].keys():
-					if value not in dictionary[section][feature][polarity]:
-						dictionary[section][feature][polarity].append(value)
-				else:
-					dictionary[section][feature][polarity]=[value]
-			else:
-				dictionary[section][feature]={}
-				dictionary[section][feature][polarity]=[value]
+		if value is None:
+			print compatta(tagged) + "\t|###|\t" + str(tagged)
 
-	with open (category_folder+"feature_indicator.json","w") as myfile:
-			json.dump(dictionary, myfile)
 
 
 if __name__ == "__main__":
 	list_folder = os.listdir(categories_folder)
 
-	for category_name in list_folder:
-		print "In esecuzione analisi su: " + category_name
-		analizza_categoria(category_name)
+	analizza_categoria("Small Kitchen Appliances")

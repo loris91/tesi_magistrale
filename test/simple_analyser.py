@@ -48,46 +48,74 @@ def trova_valore(tagged):
 			return str(element[0])
 
 
+def analizza_tupla(tupla,phrase):
+	(section,polarity,tagged) = tupla
+
+	feature = trova_caratteristica(tagged)
+	if feature is not None:
+		feature_stem = str(st.stem(feature))
+
+	value = trova_valore(tagged)
+	if value is not None:
+		value_stem = str(st.stem(value))
+	if value is not None and feature is not None:
+		print phrase
+		print (feature_stem,value_stem)
+		print ""
+
+
+def analizza_pros(pros_json):
+	for section in pros_json.keys():
+		section = str(section)
+
+		for i in range (0,11):
+			phrase = pros_json[section][i]
+		#for phrase in cons_json[section]:
+			phrase = phrase.lower()
+			tokens = nltk.word_tokenize(phrase)
+			if len(tokens)<8:
+				tagged = nltk.pos_tag(tokens)
+				field = (section,"pros",tagged)
+				analizza_tupla(field,phrase)
+
+
+def analizza_cons(cons_json):
+	for section in cons_json.keys():
+		section = str(section)
+
+		for i in range (0,11):
+			phrase = cons_json[section][i]
+		#for phrase in cons_json[section]:
+			phrase = phrase.lower()
+			tokens = nltk.word_tokenize(phrase)
+			if len(tokens)<8:
+				tagged = nltk.pos_tag(tokens)
+				field = (section,"cons",tagged)
+				analizza_tupla(field,phrase)
+
+
 def analizza_categoria(category_name):
 	category_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"+category_name+"/"
 	
-	with open(category_folder+"tmp_file.txt") as tmp_pros_file:
-		content = tmp_pros_file.read().splitlines()
+	global tmp_file
+	tmp_file = open(category_folder+"tmp_file.txt","w")
 
-	dictionary = {}
+	with open(category_folder+"pros_cat.json") as json_file:
+		pros_json = json.load(json_file)
+		json_file.close()
 
-	for tupla in content:
-		(section,polarity,tagged) = eval(tupla)
+	with open(category_folder+"cons_cat.json") as json_file:
+		cons_json = json.load(json_file)
+		json_file.close()
 
-		if section not in dictionary.keys():
-			dictionary[section]={}
-
-		feature = trova_caratteristica(tagged)
-
-		#if feature is not None:
-		#	feature = str(st.stem(feature))
+	analizza_pros(pros_json)
+	analizza_cons(cons_json)
 
 
-		value = trova_valore(tagged)
-		if value is not None:
-			#value = str(st.stem(value))
-			if feature in dictionary[section].keys():
-				if polarity in dictionary[section][feature].keys():
-					if value not in dictionary[section][feature][polarity]:
-						dictionary[section][feature][polarity].append(value)
-				else:
-					dictionary[section][feature][polarity]=[value]
-			else:
-				dictionary[section][feature]={}
-				dictionary[section][feature][polarity]=[value]
-
-	with open (category_folder+"feature_indicator.json","w") as myfile:
-			json.dump(dictionary, myfile)
 
 
 if __name__ == "__main__":
 	list_folder = os.listdir(categories_folder)
 
-	for category_name in list_folder:
-		print "In esecuzione analisi su: " + category_name
-		analizza_categoria(category_name)
+	category_name = "Computers"
+	analizza_categoria(category_name)
