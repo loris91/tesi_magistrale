@@ -1,33 +1,108 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-15 -*-
 
+'''
+La classe offre delle analisi statistiche su i dati memorizzati nel DB
+'''
+
 import pymongo
 import os
 import json
 from bson.objectid import ObjectId
 from pprint import pprint
+import collections
 
 categories_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"
+list_folder = os.listdir(categories_folder)
 
 connection = pymongo.Connection()
 
 db = connection["ciao_co_uk"]
 products = db["products"]
 
-def calcola(array):
-	d = {}
-	for text in array:
-		key = str(text)
 
-		if key in d.keys():
-			d[key] = d[key]+1
-		else:
-			d[key] = 1
+def calcola_totale():
+	elements = db.products.find({})
+	print elements.count()
+	print ""
 
-	stat = ""
-	for key in d.keys():
-		stat = stat + "\t" + str(d[key])
-	return d
+def calcola_totale_pros():
+	elements = db.products.find({"polarity":"pros"})
+	#print elements.count()
+
+	for cat in list_folder:
+		elem = db.products.find({"category":cat,"polarity":"pros"})
+		print cat + "\t" +str(elem.count())
+	print ""
+
+def calcola_totale_cons():
+	elements = db.products.find({"polarity":"cons"})
+	#print elements.count()
+
+	for cat in list_folder:
+		elem = db.products.find({"category":cat,"polarity":"cons"})
+		print cat + "\t" +str(elem.count())
+	print ""
+
+def visualizza_dati_categoria(category_name):
+	elements = db.products.find({"category":category_name})
+	for ele in elements:
+		print (ele["section"],ele["polarity"],ele["feature"],ele["value"])
+
+def calcola_termini_feature_pros():
+	for cat in list_folder:
+		dic = {}
+		elements = db.products.find({"category":cat,"polarity":"pros"})
+		for el in elements:
+			feature = el["feature"]
+			size = len(feature.split())
+			if size in dic.keys():
+				dic[size] = dic[size] +1
+			else:
+				dic[size] = 1
+		print "Pros, Categoria: " + cat + "\t" + str(dic)
+
+def calcola_termini_feature_cons():
+	for cat in list_folder:
+		dic = {}
+		elements = db.products.find({"category":cat,"polarity":"cons"})
+		for el in elements:
+			feature = el["feature"]
+			size = len(feature.split())
+			if size in dic.keys():
+				dic[size] = dic[size] +1
+			else:
+				dic[size] = 1
+		print "Cons, Categoria: " + cat + "\t" + str(dic)
+
+
+def calcola_termini_indicator_pros():
+	for cat in list_folder:
+		dic = {}
+		elements = db.products.find({"category":cat,"polarity":"pros"})
+		for el in elements:
+			feature_indicator = el["value"]
+			for a in feature_indicator:
+				size = len(a.split())
+				if size in dic.keys():
+					dic[size] = dic[size] +1
+				else:
+					dic[size] = 1
+		print "Pros, Categoria: " + cat + "\t" + str(dic)
+
+def calcola_termini_indicator_cons():
+	for cat in list_folder:
+		dic = {}
+		elements = db.products.find({"category":cat,"polarity":"cons"})
+		for el in elements:
+			feature_indicator = el["value"]
+			for a in feature_indicator:
+				size = len(a.split())
+				if size in dic.keys():
+					dic[size] = dic[size] +1
+				else:
+					dic[size] = 1
+		print "Cons, Categoria: " + cat + "\t" + str(dic)
 
 def inverti(data):
 	ret = {}
@@ -41,40 +116,69 @@ def inverti(data):
 			ret[k]=[key]
 	return ret
 
-def calcola_totale():
-	elements = db.products.find({})
-	print elements.count()
+def trova_maggiore(data):
+	print max(data.keys())
 
-def calcola_totale_pros():
-	list_folder = os.listdir(categories_folder)
 
-	elements = db.products.find({"polarity":"pros"})
-	#print elements.count()
+def trova_feature_indicator_frequenti_pros():
+	for category_name in list_folder:
+		dic = {}
+		elements = db.products.find({"category":category_name,"polarity":"pros"})
+		for el in elements:
+			feature_indicator = el["value"]
+			for a in feature_indicator:
+				if a in dic.keys():
+					dic[a] = dic[a]+1
+				else:
+					dic[a]=1
+		dic = inverti(dic)
 
-	for cat in list_folder:
-		elem = db.products.find({"category":cat,"polarity":"pros"})
-		print cat + "\t" +str(elem.count())
+		a =   collections.OrderedDict(sorted(dic.items(), key=lambda t: t[0], reverse=True))
+		keys = a.keys()
+		l_keys = len(keys)
+		first = (keys[0], a[keys[0]])
+		second = (keys[1], a[keys[1]])
+		third = (keys[2], a[keys[2]])
+		print category_name + "\t" + str(first) + "\t" + str(second) + "\t" + str(third)
+		print ""
 
-def calcola_totale_cons():
-	list_folder = os.listdir(categories_folder)
+def trova_feature_indicator_frequenti_cons():
+	for category_name in list_folder:
+		dic = {}
+		elements = db.products.find({"category":category_name,"polarity":"cons"})
+		for el in elements:
+			feature_indicator = el["value"]
+			for a in feature_indicator:
+				if a in dic.keys():
+					dic[a] = dic[a]+1
+				else:
+					dic[a]=1
+		dic = inverti(dic)
 
-	elements = db.products.find({"polarity":"cons"})
-	#print elements.count()
+		a =   collections.OrderedDict(sorted(dic.items(), key=lambda t: t[0], reverse=True))
+		keys = a.keys()
+		l_keys = len(keys)
+		first = (keys[0], a[keys[0]])
+		second = (keys[1], a[keys[1]])
+		third = (keys[2], a[keys[2]])
+		print category_name + "\t" + str(first) + "\t" + str(second) + "\t" + str(third)
+		print ""
 
-	for cat in list_folder:
-		elem = db.products.find({"category":cat,"polarity":"cons"})
-		print cat + "\t" +str(elem.count())
-
-def visualizza_dati():
-	elements = db.products.find({"category":"Cameras"})
-	for ele in elements:
-		print (ele["section"],ele["polarity"],ele["feature"],ele["value"])
 
 if __name__ == "__main__":
 	#calcola_totale()
 	#calcola_totale_pros()
 	#calcola_totale_cons()
-	visualizza_dati()
+	#visualizza_dati_categoria("Cameras")
+
+	#calcola_termini_feature_pros()
+	#calcola_termini_feature_cons()
+
+	#calcola_termini_indicator_pros()
+	#calcola_termini_indicator_cons()
+
+	#trova_feature_indicator_frequenti_pros()
+	trova_feature_indicator_frequenti_cons()
 
 	'''
 	list_folder = os.listdir(categories_folder)

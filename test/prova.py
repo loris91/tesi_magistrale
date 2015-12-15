@@ -1,36 +1,50 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-15 -*-
 
+'''
+La classe offre una prova nel cercare le feature all'interno delle review
+'''
+
 import os
 import re
 import json
 import nltk
+import nltk.data
 from pprint import pprint
+
+import pymongo
+from bson.objectid import ObjectId
+
 
 categories_folder = "/home/alakay/Scrivania/Ciao.co.uk/Category/"
 
-def conta_righe_file_tmp():
-	list_folder = os.listdir(categories_folder)
+connection = pymongo.Connection()
 
-	for category_name in list_folder:
-		category_folder = categories_folder+category_name+"/"
+db = connection["ciao_co_uk"]
+products = db["products"]
 
-		with open(category_folder+"tmp_file.txt") as tmp_pros_file:
-			content = tmp_pros_file.read().splitlines()
-
-		pros_count=0
-		cons_coutn=0
-		count=0
-
-		for tupla in content:
-			(section,polarity,tagged) = eval(tupla)
-			if "pros" == polarity:
-				pros_count = pros_count+1
-			if "cons" == polarity:
-				cons_coutn = cons_coutn+1
-			count = count+1
-
-		print str(category_name) + "\t" + str(pros_count) + "\t" + str(cons_coutn) + "\t" + str(count)
 
 if __name__ == "__main__":
-	conta_righe_file_tmp()
+	path = "/home/alakay/Scrivania/Ciao.co.uk/Category/Cameras/review/"
+	file_name = "Boots.json"
+	category = "Cameras"
+	section = "Photo Developing"
+
+	with open(path+file_name) as json_file:
+		data = json.load(json_file)
+		json_file.close()
+
+	review = data["reviews"][0]["Review"]
+	#print review + "\n"
+
+	tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+
+	for phase in  tokenizer.tokenize(review):
+		words = phase.split()
+		for word in words:
+			el = db.products.find({"category":category,"section":"Photo Developing","feature":"word"})
+			if el is not None:
+				print "Parola trovata: " + word
+				print "Frase partenza: " + phase
+				print "Elemento DB: " + str(el)
+				print ""

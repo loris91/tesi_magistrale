@@ -2,16 +2,9 @@
 # -*- coding: iso-8859-15 -*-
 
 '''
-La classe analyser.py prende in input i file temporanei tmp_cat.txt generati dalla classe filter.py e 
-ne analizza il contenuto andato ad estrarre feature e feature_indicator da ogni singolo commento.
-In questo passo una feature è una sequenza di parole consecutive non vuota di ["NN","NNS","NNP","NNPS"]
-cioè nomi e nomi propri, mentre
-un feature_indicator è una sequenza di parole consecutive non vuota di ["JJ","JJR","JJS","RB","RBR","RBS"],
-cioè aggettivi o avverbi.
-Vengono salvati tutti quei commenti in cui è presente almeno il feature_indicator.
-Per ogni categoria viene generato un file json in cui si memorizza
-	dictionary_json[section][feature][polarity]=list[value]
+La classe analizza i commenti scartati poichè non è stato trovato alcun feature-indicator
 '''
+
 
 import os
 import re
@@ -70,8 +63,6 @@ def analizza_categoria(category_name):
 			dictionary[section]={}
 
 		feature = trova_caratteristica(tagged)
-
-
 
 		value = trova_valore(tagged)
 		if value is None:
